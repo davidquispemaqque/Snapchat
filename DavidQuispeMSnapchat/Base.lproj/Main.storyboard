@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Iniciar Sesion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="iniciarSesionViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagen" translatesAutoresizingMaskIntoConstraints="NO" id="53V-3u-fIS">
+                                <rect key="frame" x="150" y="74" width="114" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5of-4k-SLq">
+                                <rect key="frame" x="170.5" y="299" width="73" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ingrese su Usuario" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Elc-LK-e7P">
+                                <rect key="frame" x="107" y="344" width="200" height="27.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ingrese su Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFF-Z1-1xE">
+                                <rect key="frame" x="107" y="441" width="200" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfv-Cd-AVz">
+                                <rect key="frame" x="154" y="398.5" width="106" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikp-ca-diq">
+                                <rect key="frame" x="107" y="506" width="200" height="31"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar Sesión"/>
+                                <connections>
+                                    <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="20L-yw-7ST"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5of-4k-SLq" firstAttribute="top" secondItem="53V-3u-fIS" secondAttribute="bottom" constant="25" id="5pn-jf-cck"/>
+                            <constraint firstItem="5of-4k-SLq" firstAttribute="centerX" secondItem="Elc-LK-e7P" secondAttribute="centerX" id="7A7-8B-S7l"/>
+                            <constraint firstItem="HFF-Z1-1xE" firstAttribute="centerX" secondItem="Ikp-ca-diq" secondAttribute="centerX" id="BdO-eB-8vD"/>
+                            <constraint firstItem="nfv-Cd-AVz" firstAttribute="top" secondItem="Elc-LK-e7P" secondAttribute="bottom" constant="25" id="R4i-mA-Mrd"/>
+                            <constraint firstItem="53V-3u-fIS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Rlz-Ed-vvR"/>
+                            <constraint firstItem="Ikp-ca-diq" firstAttribute="top" secondItem="HFF-Z1-1xE" secondAttribute="bottom" constant="30" id="Sax-mM-cqE"/>
+                            <constraint firstItem="nfv-Cd-AVz" firstAttribute="centerX" secondItem="HFF-Z1-1xE" secondAttribute="centerX" id="WeO-Iy-e74"/>
+                            <constraint firstItem="Elc-LK-e7P" firstAttribute="top" secondItem="5of-4k-SLq" secondAttribute="bottom" constant="25" id="atA-BZ-Qta"/>
+                            <constraint firstItem="53V-3u-fIS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azL-CZ-kkE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53V-3u-fIS" secondAttribute="trailing" constant="150" id="cAb-XN-TgB"/>
+                            <constraint firstItem="53V-3u-fIS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="cNJ-VY-gz2"/>
+                            <constraint firstItem="HFF-Z1-1xE" firstAttribute="trailing" secondItem="Ikp-ca-diq" secondAttribute="trailing" id="hTd-Ld-cif"/>
+                            <constraint firstItem="HFF-Z1-1xE" firstAttribute="top" secondItem="nfv-Cd-AVz" secondAttribute="bottom" constant="25" id="hxs-0f-ZL1"/>
+                            <constraint firstItem="Elc-LK-e7P" firstAttribute="centerX" secondItem="nfv-Cd-AVz" secondAttribute="centerX" id="kFb-KE-mU2"/>
+                            <constraint firstItem="53V-3u-fIS" firstAttribute="centerX" secondItem="5of-4k-SLq" secondAttribute="centerX" id="v7e-Tp-cR8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Elc-LK-e7P" id="ZFQ-H5-LJ0"/>
+                        <outlet property="passwordTextField" destination="HFF-Z1-1xE" id="bEb-kZ-lX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imagen" width="200" height="200"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
