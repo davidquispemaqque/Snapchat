@@ -19,34 +19,31 @@ class iniciarSesionViewController: UIViewController {
     }
 
     @IBAction func iniciarSesionTapped(_ sender: Any) {
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-                print("Intentando Iniciar Sesion")
-                if error != nil {
-                    print("Se presento el siguiente error: \(error)")
-                    Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
-                        print("Intentando crear un usuario")
-                        if error != nil{
-                            print("Se presento el siguiente error al crear el usuario: \(error)")
-                        }else{
-                            print("El usuario fue creado exitosamente")
-                            
-                            Database.database().reference().child("usuarios").child(user!.user.uid).child("email").setValue(user!.user.email)
-                            
-                            let alerta = UIAlertController(title: "Creacion de Usuario", message: "Usuario: \(self.emailTextField.text!) se creo correctamente.", preferredStyle: .alert)
-                            let btnOK = UIAlertAction(title: "Aceptar", style: .default) { (UIAlertAction) in
-                                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
-                            }
-                            alerta.addAction(btnOK)
-                            self.present(alerta, animated: true, completion: nil)
-                            self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
-                        }
-                    })
-                }else{
-                    print("Inicio de Sesion Exitoso")
-                    self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
 
+                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    if let error = error {
+                        print("Error al iniciar sesión: \(error.localizedDescription)")
+
+                        // Mostrar alerta para crear un usuario
+                        let alerta = UIAlertController(
+                            title: "Usuario no encontrado",
+                            message: "¿Deseas crear una nueva cuenta?",
+                            preferredStyle: .alert
+                        )
+
+                        let btnCrear = UIAlertAction(title: "Crear", style: .default) { _ in
+                            self.performSegue(withIdentifier: "loginACrearUsuarioSegue", sender: nil)
+                        }
+                        let btnCancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+
+                        alerta.addAction(btnCrear)
+                        alerta.addAction(btnCancelar)
+                        self.present(alerta, animated: true, completion: nil)
+                    } else {
+                        print("Inicio de sesión exitoso")
+                        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                    }
                 }
             }
         }
-}
-
