@@ -169,15 +169,220 @@
             </objects>
             <point key="canvasLocation" x="-291" y="741"/>
         </scene>
+        <!--Ver Snap View Controller-->
+        <scene sceneID="5nZ-Rq-Qlw">
+            <objects>
+                <viewController id="xtQ-Sm-xAV" customClass="VerSnapViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FLP-tQ-qn2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRE-1B-hDz">
+                                <rect key="frame" x="20" y="56" width="282" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Imagen Enviada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaW-9r-hpI">
+                                <rect key="frame" x="20" y="85" width="235" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Xm-jQ-noo">
+                                <rect key="frame" x="20" y="129" width="374" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="95f-Yq-lze"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zcA-un-qOJ"/>
+                    <connections>
+                        <outlet property="imageView" destination="7Xm-jQ-noo" id="cnL-bf-qnz"/>
+                        <outlet property="lblMensaje" destination="VRE-1B-hDz" id="RMR-8T-Mia"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPb-8e-fjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="-323"/>
+        </scene>
+        <!--Ver Audio View Controller-->
+        <scene sceneID="05R-W1-4eT">
+            <objects>
+                <viewController id="UcO-kb-l5u" customClass="VerAudioViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PU7-hO-63V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xND-rA-LGk">
+                                <rect key="frame" x="150" y="189" width="114" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reproducir"/>
+                                <connections>
+                                    <action selector="reproducirButtonTapped:" destination="UcO-kb-l5u" eventType="touchUpInside" id="Prk-A5-Vz0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripcion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-rh-pbE">
+                                <rect key="frame" x="50" y="133" width="196" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x3q-TX-qPy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1vi-mg-VHX"/>
+                    <connections>
+                        <outlet property="tituloLabel" destination="TIh-rh-pbE" id="3tj-B4-JLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hl5-dz-UoV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515.9420289855075" y="1166.5178571428571"/>
+        </scene>
+        <!--Grabar Audio View Controller-->
+        <scene sceneID="TnY-k8-c2J">
+            <objects>
+                <viewController id="ltf-iG-QFC" customClass="GrabarAudioViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3tw-ka-dvh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Rz-i8-6DJ">
+                                <rect key="frame" x="80" y="226" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-0p-ryE">
+                                <rect key="frame" x="80" y="382" width="254" height="31"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Elegir Contacto"/>
+                                <connections>
+                                    <action selector="elegirContactoTapped:" destination="Qqm-34-GYI" eventType="touchUpInside" id="rsk-5S-A9y"/>
+                                    <action selector="seleccionarContactoTapped:" destination="ltf-iG-QFC" eventType="touchUpInside" id="lnB-Wf-1YD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zac-cP-t0j">
+                                <rect key="frame" x="80" y="280" width="254" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Grabar"/>
+                                <connections>
+                                    <action selector="grabarButtonTapped:" destination="ltf-iG-QFC" eventType="touchUpInside" id="27L-eI-56l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix0-2R-KuS">
+                                <rect key="frame" x="80" y="331" width="254" height="31"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Guardar"/>
+                                <connections>
+                                    <action selector="detenerButtonTapped:" destination="ltf-iG-QFC" eventType="touchUpInside" id="XQl-bd-KU3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="registro" translatesAutoresizingMaskIntoConstraints="NO" id="Gkb-Da-dyk">
+                                <rect key="frame" x="87" y="78" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="L2x-35-X8X"/>
+                                    <constraint firstAttribute="width" constant="240" id="oDe-sx-edh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kHH-CF-CFI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zac-cP-t0j" firstAttribute="width" secondItem="Ix0-2R-KuS" secondAttribute="width" id="9uI-27-set"/>
+                            <constraint firstItem="zac-cP-t0j" firstAttribute="centerX" secondItem="Ix0-2R-KuS" secondAttribute="centerX" id="FdJ-Zn-OHP"/>
+                            <constraint firstItem="Gkb-Da-dyk" firstAttribute="top" secondItem="kHH-CF-CFI" secondAttribute="top" constant="22" id="R9m-F6-udQ"/>
+                            <constraint firstItem="j8i-0p-ryE" firstAttribute="top" secondItem="Ix0-2R-KuS" secondAttribute="bottom" constant="20" id="SCC-SX-DUD"/>
+                            <constraint firstItem="5Rz-i8-6DJ" firstAttribute="leading" secondItem="kHH-CF-CFI" secondAttribute="leading" constant="80" id="ZXb-ee-p5P"/>
+                            <constraint firstItem="5Rz-i8-6DJ" firstAttribute="top" secondItem="Gkb-Da-dyk" secondAttribute="bottom" constant="20" id="a2v-4s-cUn"/>
+                            <constraint firstItem="Ix0-2R-KuS" firstAttribute="width" secondItem="j8i-0p-ryE" secondAttribute="width" id="bhx-rd-JWV"/>
+                            <constraint firstItem="5Rz-i8-6DJ" firstAttribute="centerX" secondItem="3tw-ka-dvh" secondAttribute="centerX" id="cKe-XV-ew3"/>
+                            <constraint firstItem="Ix0-2R-KuS" firstAttribute="centerX" secondItem="j8i-0p-ryE" secondAttribute="centerX" id="elm-6h-h65"/>
+                            <constraint firstItem="kHH-CF-CFI" firstAttribute="trailing" secondItem="5Rz-i8-6DJ" secondAttribute="trailing" constant="80" id="iOp-bh-r7a"/>
+                            <constraint firstItem="zac-cP-t0j" firstAttribute="top" secondItem="5Rz-i8-6DJ" secondAttribute="bottom" constant="20" id="jI7-xP-Mhw"/>
+                            <constraint firstItem="5Rz-i8-6DJ" firstAttribute="width" secondItem="zac-cP-t0j" secondAttribute="width" id="jiX-XD-daK"/>
+                            <constraint firstItem="Ix0-2R-KuS" firstAttribute="top" secondItem="zac-cP-t0j" secondAttribute="bottom" constant="20" id="ks0-HZ-ACe"/>
+                            <constraint firstItem="5Rz-i8-6DJ" firstAttribute="centerX" secondItem="zac-cP-t0j" secondAttribute="centerX" id="t5B-D2-YwU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TTn-dX-YCE"/>
+                    <connections>
+                        <outlet property="grabarButton" destination="zac-cP-t0j" id="1jR-tL-HUg"/>
+                        <outlet property="tituloTextField" destination="5Rz-i8-6DJ" id="6ht-ty-ZOj"/>
+                        <segue destination="IYD-uC-nCW" kind="show" identifier="elegirUsuarioAudioSegue" id="nOU-Ux-DT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bc-l3-JOy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="1167"/>
+        </scene>
+        <!--Elegir Usuario Audio View Controller-->
+        <scene sceneID="EXQ-QG-ooj">
+            <objects>
+                <viewController id="IYD-uC-nCW" customClass="ElegirUsuarioAudioViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ch7-Kd-r2l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pO6-CK-tig">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="grs-Pd-dZx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pO6-CK-tig" firstAttribute="top" secondItem="grs-Pd-dZx" secondAttribute="top" id="3iY-Os-hY1"/>
+                            <constraint firstItem="grs-Pd-dZx" firstAttribute="bottom" secondItem="pO6-CK-tig" secondAttribute="bottom" id="hJj-DB-03n"/>
+                            <constraint firstItem="grs-Pd-dZx" firstAttribute="trailing" secondItem="pO6-CK-tig" secondAttribute="trailing" id="kyY-9S-J6L"/>
+                            <constraint firstItem="pO6-CK-tig" firstAttribute="leading" secondItem="grs-Pd-dZx" secondAttribute="leading" id="tir-4U-9Ky"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Stl-la-hAo"/>
+                    <connections>
+                        <outlet property="listaUsuarios" destination="pO6-CK-tig" id="rrm-H9-7SX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQd-wT-l5k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3283" y="1172"/>
+        </scene>
         <!--Snaps View Controller-->
         <scene sceneID="w96-bl-edG">
             <objects>
-                <viewController id="2Y9-2h-mF7" customClass="SnapsViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="2Y9-2h-mF7" customClass="SnapsViewController" customModule="DavidQuispeMSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rlm-Ha-Fh6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zUe-Gv-L9l">
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y9e-D5-7R9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y9e-D5-7R9" firstAttribute="trailing" secondItem="zUe-Gv-L9l" secondAttribute="trailing" id="6lW-F6-jyX"/>
+                            <constraint firstItem="zUe-Gv-L9l" firstAttribute="top" secondItem="Y9e-D5-7R9" secondAttribute="top" id="FmS-hB-3fG"/>
+                            <constraint firstItem="zUe-Gv-L9l" firstAttribute="leading" secondItem="Y9e-D5-7R9" secondAttribute="leading" id="fcH-St-FYI"/>
+                            <constraint firstItem="Y9e-D5-7R9" firstAttribute="bottom" secondItem="zUe-Gv-L9l" secondAttribute="bottom" id="mmH-TE-oJx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="z6j-HG-4FV">
                         <barButtonItem key="leftBarButtonItem" title="Cerrar Sésion" id="lIj-ZJ-U29">
@@ -185,16 +390,28 @@
                                 <action selector="cerrarSesionTapped:" destination="2Y9-2h-mF7" id="e7H-GW-5ug"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VlF-vP-ihY">
-                            <connections>
-                                <segue destination="Qqm-34-GYI" kind="show" id="x2t-jY-x6V"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="VlF-vP-ihY">
+                                <connections>
+                                    <segue destination="Qqm-34-GYI" kind="show" id="x2t-jY-x6V"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="8DB-3Z-cYr">
+                                <connections>
+                                    <segue destination="ltf-iG-QFC" kind="show" id="xBx-Gh-RYG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tablaSnaps" destination="zUe-Gv-L9l" id="xRt-FN-B31"/>
+                        <segue destination="xtQ-Sm-xAV" kind="show" identifier="versnapsegue" id="nLJ-iR-HX6"/>
+                        <segue destination="UcO-kb-l5u" kind="show" identifier="verAudioSegue" id="alI-2l-uh5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ebv-Fq-qm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293" y="68"/>
+            <point key="canvasLocation" x="1516" y="406"/>
         </scene>
         <!--Enviar Mensaje-->
         <scene sceneID="sgm-1N-dTo">
@@ -257,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnD-4J-Lip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2061" y="70"/>
+            <point key="canvasLocation" x="2594" y="-323"/>
         </scene>
         <!--Lista de Usuarios-->
         <scene sceneID="L5Z-oy-SR4">
@@ -288,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvG-5T-EtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2858" y="63"/>
+            <point key="canvasLocation" x="3391" y="-329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="J1c-Fe-0t1">
@@ -307,7 +524,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m55-zA-85n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621.73913043478262" y="62.946428571428569"/>
+            <point key="canvasLocation" x="743" y="396"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -315,11 +532,27 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="imagen" width="200" height="200"/>
+        <image name="registro" width="64" height="64"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
